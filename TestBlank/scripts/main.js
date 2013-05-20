@@ -13,7 +13,7 @@ var deviceready = function() {
     
     jso_registerRedirectHandler(function(url) {
         inAppBrowserRef = window.open(url); 
-        inAppBrowserRef.addEventListener('loadstart', function(){LocationChange(e)}, false);
+        inAppBrowserRef.addEventListener('loadstart', function(e){LocationChange(e.url)}, false);
     });
 
     /*
