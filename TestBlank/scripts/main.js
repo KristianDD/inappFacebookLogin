@@ -12,8 +12,8 @@ var deviceready = function() {
         inAppBrowserRef;
     
     jso_registerRedirectHandler(function(url) {
-        inAppBrowserRef = window.open(url); 
-        inAppBrowserRef.addEventListener('loadstart', function(e){LocationChange(e.url)}, false);
+        inAppBrowserRef = window.open(url, "_blank"); 
+        inAppBrowserRef.addEventListener('loadstop', function(e){LocationChange(e.url)}, false);
     });
 
     /*
